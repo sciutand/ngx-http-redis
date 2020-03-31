@@ -179,7 +179,7 @@ ngx_http_redis_handler(ngx_http_request_t *r)
     ngx_http_redis_ctx_t           *ctx;
     ngx_http_redis_loc_conf_t      *rlcf;
 
-    if (!(r->method & (NGX_HTTP_GET|NGX_HTTP_HEAD))) {
+    if (!(r->method & (NGX_HTTP_GET|NGX_HTTP_HEAD|NGX_HTTP_POST))) {
         return NGX_HTTP_NOT_ALLOWED;
     }
 
