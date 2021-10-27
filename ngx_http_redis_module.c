@@ -4,7 +4,6 @@
  * Copyright (C) Sergey A. Osokin
  */
 
-#define NGX_ESCAPE_REDIS   4
 
 #define REDIS_AUTH_CMD      "*2\r\n$4\r\nauth\r\n"
 #define REDIS_GET_CMD       "*2\r\n$3\r\nget\r\n"
@@ -16,6 +15,7 @@
 #include <ngx_core.h>
 #include <ngx_http.h>
 #include <nginx.h>
+#define NGX_ESCAPE_REDIS  NGX_ESCAPE_MEMCACHED
 
 
 typedef struct {
